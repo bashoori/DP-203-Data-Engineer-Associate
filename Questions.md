@@ -404,4 +404,81 @@ Best fact table distribution?
 
 ---
 
+## FAQs — DP-203 Azure Data Engineer Associate
 
+### 1. What is the Microsoft Azure Data Engineer Associate DP-203 certification?
+The DP-203 certification validates your ability to design and implement data solutions using Azure services such as Synapse Analytics, Data Lake, and Databricks for data processing and analytics.
+
+---
+
+### 2. How do I become an Azure Data Engineer Associate certified professional?
+You must pass the **DP-203: Data Engineering on Microsoft Azure** exam, which evaluates your ability to integrate, transform, secure, and monitor data using Azure tools.
+
+---
+
+### 3. What are the prerequisites for the DP-203 certification exam?
+There are no mandatory prerequisites. Microsoft recommends experience with:
+
+- Data processing concepts  
+- SQL  
+- Python  
+- Azure data services  
+
+---
+
+### 4. How much does the DP-203 exam cost?
+The exam costs approximately **$165 USD**, though pricing varies by country or region.
+
+---
+
+### 5. How many questions are in the exam and how long is it?
+- **Questions:** ~40–60  
+- **Duration:** 120 minutes  
+
+---
+
+### 6. What topics are covered in the exam?
+The exam focuses on:
+
+- Data storage design  
+- Data integration pipelines  
+- Data transformation  
+- Monitoring and optimization  
+- Security and governance  
+
+Using tools such as:
+
+- Azure Data Factory  
+- Azure Synapse Analytics  
+- Azure Databricks  
+
+---
+
+### 7. How difficult is the DP-203 exam?
+It is considered **intermediate to advanced**. Passing typically requires both conceptual understanding and hands-on Azure experience.
+
+---
+
+### 8. How long does preparation usually take?
+Most candidates prepare in **8–10 weeks**, depending on prior Azure and data engineering experience.
+
+---
+
+### 9. What jobs can I get after certification?
+Common roles include:
+
+- Azure Data Engineer  
+- Data Analyst  
+- Data Architect  
+- Business Intelligence Developer  
+
+---
+
+### 10. What is the average salary after certification?
+Typical salary range:
+
+**$110,000–$145,000 USD annually**
+
+This varies by region, experience level, and employer.
+
+---
