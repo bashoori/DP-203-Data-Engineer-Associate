@@ -404,5 +404,4 @@ Best fact table distribution?
 
 ---
 
-## Usage
-Add this file as:
+
