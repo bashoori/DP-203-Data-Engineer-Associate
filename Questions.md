@@ -1,196 +1,408 @@
-# DP-203 Azure Data Engineer Associate — Sample Questions (2026 Edition)
-
-**Source:** CertiMaan  
-**Published:** Oct 27, 2025  
-**Last Updated:** Dec 9, 2025  
-**Format:** Practice Questions + Exam Overview  
+# DP-203 Azure Data Engineer Associate — Sample Questions (2026)
 
 ---
 
-## Overview
+## Questions
 
-This question set is designed to simulate real DP-203 exam scenarios aligned with Microsoft’s 2025–2026 objectives. Topics covered include:
+### 1
+When designing a multi-region Cosmos DB account with session consistency, which configuration ensures the lowest RTO during regional failover without data loss?
 
-- Azure Synapse Analytics  
-- Azure Data Factory  
-- Azure Data Lake Storage Gen2  
-- Cosmos DB  
-- Delta Lake  
-- Security & Governance  
-- Performance Optimization  
+- Single write region with manual failover  
+- Multi-region writes with automatic failover  
+- Single write region with service-managed failover  
+- Multi-region writes with manual failover  
 
-Use these questions to assess readiness, identify weak areas, and reinforce hands-on knowledge.
+**Answer:** <span style="color:green">Multi-region writes with automatic failover</span>
 
 ---
 
-# Practice Questions
+### 2
+When implementing cross-tenant data sharing via Azure Data Share, what ensures data residency compliance?
+
+- Private endpoint configuration  
+- Source-defined export settings  
+- Snapshot execution region  
+- Recipient storage location  
+
+**Answer:** <span style="color:green">Snapshot execution region</span>
 
 ---
 
-## 1–10
+### 3
+For a Parquet dataset in ADLS Gen2 receiving 5 TB/hour streaming IoT data, which partitioning strategy optimizes query performance for time-range filters?
 
-1. **Multi-region Cosmos DB + lowest RTO + no data loss**
-   - Single write region with manual failover  
-   - Multi-region writes with automatic failover  
-   - Single write region with service-managed failover  
-   - Multi-region writes with manual failover  
+- Partition by device ID Hive-style  
+- Hourly partition on event timestamp  
+- Round-robin partitioning  
+- Hash partitioning on sensor type  
 
-2. **Cross-tenant Azure Data Share residency compliance**
-   - Private endpoint configuration  
-   - Source-defined export settings  
-   - Snapshot execution region  
-   - Recipient storage location  
-
-3. **5 TB/hour IoT streaming → optimal partition**
-   - Partition by device ID Hive-style  
-   - Hourly partition on event timestamp  
-   - Round-robin partitioning  
-   - Hash partitioning on sensor type  
-
-4. **Blob feature reducing Synapse Spark latency**
-   - Archive tier migration  
-   - Premium block blobs  
-   - Immutable storage  
-   - Object replication  
-
-5. **Serverless SQL querying Delta Lake with ZORDER**
-   - Automatic statistics update  
-   - Predicate pushdown  
-   - Data skipping via zone maps  
-   - In-memory caching  
-
-6. **Cosmos DB analytical store partition key**
-   - Inherited from transactional store  
-   - Configurable during Synapse link  
-   - Automatic hash distribution  
-   - Fixed by Azure  
-
-7. **Reduce cold-tier egress costs**
-   - GRS  
-   - Azure CDN  
-   - Object replication to region  
-   - RA-GRS read access  
-
-8. **Force Spark DataFrame materialization**
-   - `.cache()`  
-   - `.checkpoint()`  
-   - `.persist()`  
-   - `.materialize()`  
-
-9. **Columnstore compression adapting automatically**
-   - PAGE compression  
-   - COMPRESS_ALL option  
-   - Automatic adaptive compression  
-   - Rowgroup dictionary encoding  
-
-10. **Version-level immutability effect**
-   - All versions WORM-protected  
-   - Only current immutable  
-   - Auto delete versions  
-   - Disables soft delete  
+**Answer:** <span style="color:green">Hourly partition on event timestamp</span>
 
 ---
 
-## 11–20
+### 4
+Which Blob Storage feature reduces latency for Spark on Synapse accessing hot-tier data?
 
-11. **Delta Lake ZORDER on timestamp**
-12. **Avoid schema inference errors (serverless CSV)**
-13. **Most secure PolyBase credential**
-14. **Cosmos DB feature reducing RU for point reads**
-15. **Indexing policy optimizing storage costs**
-16. **Effect of `mergeSchema=true`**
-17. **Prevent masked data exposure**
-18. **Cross-tenant auth without secrets**
-19. **Enable hierarchical namespace impact**
-20. **Exactly-once Change Feed processing**
+- Archive tier migration  
+- Premium block blobs  
+- Immutable storage  
+- Object replication  
+
+**Answer:** <span style="color:green">Premium block blobs</span>
 
 ---
 
-## 21–30
+### 5
+In Synapse serverless SQL pool, what happens when querying a Delta Lake table with ZORDER applied on the `customer_id` column?
 
-21. Best compression for serverless analytics  
-22. Synapse runaway query prevention  
-23. Distribution strategy for SCD Type 2  
-24. Purpose of V-Order  
-25. Automated PII deletion feature  
-26. Schema enforcement streaming → Delta  
-27. Parallel job execution in ADLA  
-28. Purpose of materialized views  
-29. Query Parquet without movement  
-30. Medallion raw zone definition  
+- Automatic statistics update in metastore  
+- Predicate pushdown to storage layer  
+- Data skipping via zone maps  
+- In-memory caching of frequent segments  
+
+**Answer:** <span style="color:green">Data skipping via zone maps</span>
 
 ---
 
-## 31–40
+### 6
+In a Cosmos DB analytical store, what determines the partition key for auto-synced data?
 
-31. GDPR deletion automation feature  
-32. Reduce Cosmos DB storage costs  
-33. Benefit of Z-order indexing  
-34. Least-contention load method  
-35. Auth method to deprecate  
-36. Accelerated networking effect  
-37. `VACUUM RETAIN 0 HOURS` result  
-38. Write-once-read-never tier  
-39. MongoDB protocol API  
-40. Synapse Link sync mechanism  
+- Inherited from transactional store logical partition key  
+- Configurable during Synapse link setup  
+- Automatic hash distribution  
+- Fixed by Azure at container level  
+
+**Answer:** <span style="color:green">Inherited from transactional store logical partition key</span>
 
 ---
 
-## 41–50
+### 7
+Which Blob Storage feature reduces egress costs by 50% for analytics workloads accessing cold-tier data in North Europe from a Synapse cluster in West Europe?
 
-41. Lowest-cost format for time-series  
-42. Unsupported Delta compression  
-43. RA-GRS effect  
-44. Best distribution for SCD updates  
-45. Customer-controlled encryption feature  
-46. Hierarchical namespace capability  
-47. Lowest-latency CDC tool  
-48. Linearizable consistency level  
-49. Auto-scaling throughput feature  
-50. Best fact table distribution  
+- Geo-redundant storage (GRS)  
+- Azure CDN integration  
+- Object replication to West Europe  
+- RA-GRS read access  
+
+**Answer:** <span style="color:green">Object replication to West Europe</span>
 
 ---
 
-# FAQ
+### 8
+Which command forces materialization of a Spark dataframe before writing to Delta Lake?
 
-### What is DP-203?
-Certification validating ability to design and implement Azure data solutions using Synapse, Data Factory, and analytics services.
+- `.cache()`  
+- `.checkpoint()`  
+- `.persist()`  
+- `.materialize()`  
 
-### Prerequisites
-None required. Recommended:
-- SQL knowledge  
-- Python basics  
-- Data processing experience  
-- Azure familiarity  
-
-### Exam Details
-- **Questions:** ~40–60  
-- **Duration:** 120 minutes  
-- **Cost:** ~165 USD  
-
-### Difficulty
-Intermediate to advanced. Real-world experience strongly recommended.
-
-### Typical Preparation Time
-- 8–10 weeks average
-
-### Career Outcomes
-Possible roles:
-- Azure Data Engineer  
-- Analytics Engineer  
-- Data Architect  
-- BI Developer  
-
-### Salary Range
-Approx. **$110k–$145k USD** depending on experience and region.
+**Answer:** <span style="color:green">.checkpoint()</span>
 
 ---
 
-# Study Tip
+### 9
+When implementing columnstore indexes in Synapse dedicated SQL pool, which compression technique dynamically adapts to data patterns without manual intervention?
 
-Treat these questions as diagnostic tools. If you cannot explain *why* an answer is correct, review that topic and test again. Certification exams reward understanding, not memorization.
+- PAGE compression  
+- Reorganize index with COMPRESS_ALL option  
+- Automatic adaptive compression  
+- Rowgroup-level dictionary encoding  
+
+**Answer:** <span style="color:green">Rowgroup-level dictionary encoding</span>
 
 ---
 
-**License:** Educational / practice use  
-**Maintainer:** Add your name or GitHub handle here
+### 10
+What happens when you enable **Version Level Immutability** on an ADLS Gen2 container?
+
+- All blob versions become WORM-protected  
+- Only current version is immutable  
+- Auto-deletes versions after retention period  
+- Disables soft delete functionality  
+
+**Answer:** <span style="color:green">All blob versions become WORM-protected</span>
+
+---
+
+### 11
+Primary advantage of `OPTIMIZE ZORDER BY timestamp`?
+
+**Answer:** <span style="color:green">Accelerates point-in-time queries via data clustering</span>
+
+---
+
+### 12
+Avoid schema inference errors in serverless CSV?
+
+**Answer:** <span style="color:green">OPENROWSET with explicit schema</span>
+
+---
+
+### 13
+Most secure PolyBase credential?
+
+**Answer:** <span style="color:green">Managed Identity</span>
+
+---
+
+### 14
+Cosmos DB feature reducing RU for point reads?
+
+**Answer:** <span style="color:green">Point read API</span>
+
+---
+
+### 15
+Best indexing policy for deviceId + timestamp queries?
+
+**Answer:** <span style="color:green">Composite index on (deviceId, timestamp)</span>
+
+---
+
+### 16
+Effect of `mergeSchema=true`?
+
+**Answer:** <span style="color:green">Auto-resolves schema conflicts during writes</span>
+
+---
+
+### 17
+Prevent masked data exposure?
+
+**Answer:** <span style="color:green">Always Encrypted with secure enclaves</span>
+
+---
+
+### 18
+Cross-tenant access without secrets?
+
+**Answer:** <span style="color:green">Managed identity federation</span>
+
+---
+
+### 19
+Effect of hierarchical namespace?
+
+**Answer:** <span style="color:green">POSIX-compliant directory operations</span>
+
+---
+
+### 20
+Exactly-once Change Feed processing?
+
+**Answer:** <span style="color:green">Change Feed processor</span>
+
+---
+
+### 21
+Best compression for serverless analytics?
+
+**Answer:** <span style="color:green">SNAPPY</span>
+
+---
+
+### 22
+Prevent runaway queries?
+
+**Answer:** <span style="color:green">Workload groups</span>
+
+---
+
+### 23
+Best distribution for SCD Type 2 merges?
+
+**Answer:** <span style="color:green">Hash-distributed on business key</span>
+
+---
+
+### 24
+Purpose of V-Order?
+
+**Answer:** <span style="color:green">Vectorized execution optimization</span>
+
+---
+
+### 25
+Automated PII deletion feature?
+
+**Answer:** <span style="color:green">Lifecycle management rules</span>
+
+---
+
+### 26
+Schema enforcement streaming → Delta?
+
+**Answer:** <span style="color:green">Delta Lake schema validation</span>
+
+---
+
+### 27
+Parallel job execution determined by?
+
+**Answer:** <span style="color:green">AU allocation per job</span>
+
+---
+
+### 28
+Materialized views purpose?
+
+**Answer:** <span style="color:green">Pre-aggregate frequently queried data</span>
+
+---
+
+### 29
+Query Parquet without movement?
+
+**Answer:** <span style="color:green">Synapse serverless SQL pool</span>
+
+---
+
+### 30
+Raw zone in medallion architecture?
+
+**Answer:** <span style="color:green">Bronze: Unmodified source data</span>
+
+---
+
+### 31
+Automated GDPR deletion?
+
+**Answer:** <span style="color:green">Lifecycle management + blob index tags</span>
+
+---
+
+### 32
+Reduce Cosmos storage costs?
+
+**Answer:** <span style="color:green">Analytical TTL</span>
+
+---
+
+### 33
+Benefit of Z-order?
+
+**Answer:** <span style="color:green">Accelerates multi-column predicates</span>
+
+---
+
+### 34
+Least contention load method?
+
+**Answer:** <span style="color:green">COPY INTO statement</span>
+
+---
+
+### 35
+Auth method to deprecate?
+
+**Answer:** <span style="color:green">Shared Key authorization</span>
+
+---
+
+### 36
+Accelerated networking effect?
+
+**Answer:** <span style="color:green">Bypasses hypervisor for network traffic</span>
+
+---
+
+### 37
+`VACUUM RETAIN 0 HOURS` does?
+
+**Answer:** <span style="color:green">Removes all historical versions</span>
+
+---
+
+### 38
+Write-once-read-never tier?
+
+**Answer:** <span style="color:green">Archive</span>
+
+---
+
+### 39
+MongoDB compatibility API?
+
+**Answer:** <span style="color:green">MongoDB API</span>
+
+---
+
+### 40
+Synapse Link sync mechanism?
+
+**Answer:** <span style="color:green">Change Feed processor</span>
+
+---
+
+### 41
+Lowest-cost time-series format?
+
+**Answer:** <span style="color:green">Parquet with SNAPPY</span>
+
+---
+
+### 42
+Unsupported Delta compression?
+
+**Answer:** <span style="color:green">GZIP</span>
+
+---
+
+### 43
+RA-GRS effect?
+
+**Answer:** <span style="color:green">Secondary region becomes readable</span>
+
+---
+
+### 44
+Best distribution for SCD updates?
+
+**Answer:** <span style="color:green">Hash-distributed</span>
+
+---
+
+### 45
+Customer-controlled encryption?
+
+**Answer:** <span style="color:green">Transparent Data Encryption (TDE)</span>
+
+---
+
+### 46
+Hierarchical namespace enables?
+
+**Answer:** <span style="color:green">POSIX-compliant access control lists</span>
+
+---
+
+### 47
+Lowest-latency CDC tool?
+
+**Answer:** <span style="color:green">Kafka Connect with Debezium</span>
+
+---
+
+### 48
+Linearizable consistency?
+
+**Answer:** <span style="color:green">Strong</span>
+
+---
+
+### 49
+Auto-scale throughput feature?
+
+**Answer:** <span style="color:green">Autoscale provisioned throughput</span>
+
+---
+
+### 50
+Best fact table distribution?
+
+**Answer:** <span style="color:green">Hash-distributed on join key</span>
+
+---
+
+## Usage
+Add this file as:
