@@ -160,7 +160,7 @@ The result is a modern data platform capable of transforming Binaryville’s raw
 
 
 
-## Data Lakehouse Architecture — High Level Solution
+# Data Lakehouse Architecture — High Level Solution
 
 A data lakehouse combines the scalability of a data lake with the structure and performance of a data warehouse. It supports large scale storage, diverse data formats, transactional reliability, and analytical performance within a single architecture.
 
@@ -232,7 +232,7 @@ This layered approach provides:
 
 By progressively refining data across layers, the architecture ensures that raw data remains preserved while business users interact only with trusted, high quality datasets.
 
-## Fabric End to End Project Architecture Diagram
+# Fabric End to End Project Architecture Diagram
 
 The project architecture consists of multiple data sources including customer data, product data, and order data. These datasets are ingested into Azure Data Lake Storage, where they are processed through a structured pipeline that organizes data into Bronze, Silver, and Gold layers. The final curated data is then used for visualization and analytics.
 
@@ -240,4 +240,38 @@ The project architecture consists of multiple data sources including customer da
 
 Microsoft Fabric provides an integrated platform that supports the entire workflow. Data pipelines, Spark notebooks, and visualization tools all operate within the same environment, allowing every stage of the architecture to be managed, executed, and monitored in a unified system.
 
+# Fabric Workspace Creation
 
+In this section, we walk through the process of creating a Microsoft Fabric workspace for Binaryville’s data lakehouse solution. The workspace serves as the core environment where all data engineering, analytics, and reporting activities will be developed and managed.
+
+---
+
+### Prerequisite
+
+Before creating the workspace, ensure you have:
+
+- An active Microsoft Fabric subscription or trial
+
+---
+
+### Step 1: Log in to Microsoft Fabric
+
+Open the Microsoft Fabric portal and sign in using your Azure credentials with the required permissions.
+
+---
+
+### Step 2: Navigate to Workspaces
+
+After logging in, select **Workspaces** from the left navigation menu. This section displays all existing workspaces and allows you to manage or create new ones.
+
+---
+
+### Step 3: Create a New Workspace
+
+1. Click **Create Workspace**
+2. Enter a workspace name  
+   Example: `Binaryville`
+3. Enter a description  
+   Example: `Binaryville Lakehouse`
+
+Once saved, the workspace will be created and ready for use within Microsoft Fabric.
