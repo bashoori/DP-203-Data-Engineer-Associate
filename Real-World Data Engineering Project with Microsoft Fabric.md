@@ -1,4 +1,4 @@
-# Real World Project Case Study
+                                                       # Real World Project Case Study
 
 ## Overview
 
@@ -277,3 +277,92 @@ After logging in, select **Workspaces** from the left navigation menu. This sect
    Example: `Binaryville Lakehouse`
 
 Once saved, the workspace will be created and ready for use within Microsoft Fabric.
+
+
+# Introduction to Azure Data Lake Storage (ADLS)
+
+Now that the Fabric workspace is ready, the next step is understanding Azure Data Lake Storage (ADLS), which serves as the foundation of the lakehouse architecture. ADLS provides scalable, secure, and cost efficient cloud storage capable of handling Binaryville’s massive datasets. It enables storage, management, and analysis of large volumes of structured and unstructured data within a unified environment.
+
+Azure Data Lake Storage is designed for large scale analytics workloads. It combines the reliability of Azure Blob Storage with capabilities optimized for big data processing. This allows support for multiple file formats such as CSV, JSON, Parquet, and other analytical data types.
+
+---
+
+### Key Features
+
+- **Scalability**  
+  Handles petabyte scale data volumes, making it suitable for enterprise level datasets.
+
+- **Security**  
+  Provides enterprise grade protections including role based access control, encryption at rest, and secure transfer.
+
+- **Cost Efficiency**  
+  Supports storage tiering so data can be stored at different cost levels depending on access frequency.
+
+---
+
+### Advantages for Binaryville
+
+- **Centralized Storage**  
+  All structured and unstructured data can be stored in one unified repository.
+
+- **Multi Format Support**  
+  Handles diverse formats such as CSV, JSON, and Parquet, which are required for customer, product, and transaction datasets.
+
+- **Elastic Scalability**  
+  Storage grows automatically as data volume increases.
+
+- **Platform Integration**  
+  Integrates directly with Microsoft Fabric, Power BI, and other Azure services for seamless analytics workflows.
+
+---
+
+### Hierarchical Namespace
+
+ADLS includes hierarchical namespace support, which enables directory style organization similar to a file system. This improves performance for file operations and simplifies management of large datasets by structuring them logically.
+
+---
+
+### Access Tiers
+
+ADLS supports multiple storage tiers that optimize cost and performance:
+
+- **Hot Tier** for frequently accessed data  
+- **Cool Tier** for infrequently accessed data  
+- **Archive Tier** for long term storage  
+
+This allows organizations to balance performance needs with storage costs.
+
+---
+
+### Data Security
+
+Security is enforced through multiple mechanisms:
+
+- Role Based Access Control (RBAC)
+- Shared Access Signatures (SAS)
+- Encryption at rest
+
+These features ensure that only authorized users can access sensitive data.
+
+---
+
+### Setting Up ADLS for Binaryville
+
+#### Step 1: Create a Storage Account
+
+1. Go to the Azure portal
+2. Navigate to **Storage Accounts**
+3. Select **Create**
+4. Enter required details such as subscription, resource group, and region
+
+---
+
+#### Step 2: Configure Data Containers
+
+Create a container named: landing
+
+<p align="center">
+  <img src="images/landing.png" width="600">
+</p>
+
+This container will store incoming data for customer, product, and order datasets before processing.
