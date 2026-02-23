@@ -236,10 +236,7 @@ By progressively refining data across layers, the architecture ensures that raw 
 
 The project architecture consists of multiple data sources including customer data, product data, and order data. These datasets are ingested into Azure Data Lake Storage, where they are processed through a structured pipeline that organizes data into Bronze, Silver, and Gold layers. The final curated data is then used for visualization and analytics.
 
-<p align="center">
-  <img src="images/architecture.png" width="600">
-</p>
-<img src="images/architecture.png" width="600">
+<img src="../images/architecture.png" width="600">
 
 Microsoft Fabric provides an integrated platform that supports the entire workflow. Data pipelines, Spark notebooks, and visualization tools all operate within the same environment, allowing every stage of the architecture to be managed, executed, and monitored in a unified system.
 
