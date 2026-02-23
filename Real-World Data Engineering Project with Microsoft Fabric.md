@@ -236,7 +236,6 @@ By progressively refining data across layers, the architecture ensures that raw 
 
 The project architecture consists of multiple data sources including customer data, product data, and order data. These datasets are ingested into Azure Data Lake Storage, where they are processed through a structured pipeline that organizes data into Bronze, Silver, and Gold layers. The final curated data is then used for visualization and analytics.
 
-![Architecture](https://example.com/diagram.png)
 <p align="center">
   <img src="images/architecture.png" width="600">
 </p>
