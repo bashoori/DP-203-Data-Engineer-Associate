@@ -157,3 +157,77 @@ This architecture provides:
 - Future ready infrastructure
 
 The result is a modern data platform capable of transforming Binaryville’s raw data into actionable intelligence at global scale.
+
+
+
+## Data Lakehouse Architecture — High Level Solution
+
+A data lakehouse combines the scalability of a data lake with the structure and performance of a data warehouse. It supports large scale storage, diverse data formats, transactional reliability, and analytical performance within a single architecture.
+
+Core capabilities include:
+
+- Elastic scalability for massive datasets
+- Structured data management and ACID transactions
+- Support for structured, semi structured, and unstructured data
+- Unified platform for batch, streaming, and analytical workloads
+
+For Binaryville, this architecture allows the platform to process extremely large and diverse datasets while still enforcing the consistency and performance required for real time analytics and enterprise reporting. Microsoft Fabric enables this by integrating storage, compute, orchestration, and analytics into one environment.
+
+---
+
+## Three Layer Architecture Design
+
+The solution follows a standard medallion architecture composed of Bronze, Silver, and Gold layers. Each layer has a distinct responsibility and progressively improves data quality and usability.
+
+---
+
+### Bronze Layer — Raw Data Ingestion
+
+Purpose: Store source data exactly as received.
+
+- Ingest CSV, JSON, and Parquet files into Lakehouse storage
+- Convert files into Delta table format
+- Preserve full historical data for traceability and reprocessing
+- Maintain original schema and structure
+
+This layer serves as the system of record and ensures reproducibility of downstream transformations.
+
+---
+
+### Silver Layer — Cleaned and Conformed Data
+
+Purpose: Standardize and validate data.
+
+- Apply data quality rules such as deduplication, null handling, and schema alignment
+- Standardize currencies, timestamps, and regional formats
+- Resolve inconsistencies between datasets
+- Implement transformations using Microsoft Fabric Notebooks and Spark
+
+This layer produces reliable, analytics ready data without raw system noise.
+
+---
+
+### Gold Layer — Business Ready Aggregates
+
+Purpose: Deliver optimized datasets for reporting and decision making.
+
+- Apply business logic and aggregations
+- Create dimensional models and curated tables
+- Optimize storage and queries using Lakehouse performance features
+- Prepare data for semantic models and dashboards
+
+This layer is designed specifically for analytics consumption and high performance querying.
+
+---
+
+## Architectural Benefits
+
+This layered approach provides:
+
+- Strong data integrity through separation of concerns
+- Clear lineage from raw source to final report
+- Easier debugging and auditing
+- Scalability for future growth
+- Faster query performance for analytics users
+
+By progressively refining data across layers, the architecture ensures that raw data remains preserved while business users interact only with trusted, high quality datasets.
