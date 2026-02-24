@@ -1,4 +1,4 @@
-                                                       #Real World Project Case Study
+# Real World Project Case Study
 
 ## Overview
 
